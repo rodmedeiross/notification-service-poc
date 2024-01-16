@@ -25,12 +25,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Hubs\" />
+    <ProjectReference Include="..\Notification.Domain\Notification.Domain.csproj" />
+    <ProjectReference Include="..\Notification.Services\Notification.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Notification.Domain\Notification.Domain.csproj" />
-    <ProjectReference Include="..\Notification.Services\Notification.Services.csproj" />
+    <Compile Remove="Hubs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Hubs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Hubs\**" />
   </ItemGroup>
 
 </Project>
